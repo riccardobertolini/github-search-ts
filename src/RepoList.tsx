@@ -7,7 +7,7 @@ export interface RepoProps {
     html_url: string,
     owner: {
         avatar_url: string,
-        log: string,
+        login: string,
     },
     stargazers_count: number,
 }
