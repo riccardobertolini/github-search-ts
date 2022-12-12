@@ -20,7 +20,7 @@ export const RepoElement = styled.div`
     border: 1px solid #eee;
     border-radius: 10px;
 
-    @media (max-width: 768px) {
+    @media (min-width: 768px) {
         width: calc(50% - 90px);
     }
 
