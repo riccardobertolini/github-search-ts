@@ -14,7 +14,7 @@ export interface RepoProps {
 
 export const RepoList = ({repos}: {repos: RepoProps[]}) => {
     return <RepoWrapper>
-            {repos?.map(repo => <RepoElement key={repo.id}><img src={repo.owner.avatar_url} /><a href={repo.html_url}>{repo.name} by {repo.owner.login}</a><span>⭐ {repo.stargazers_count}</span></RepoElement>)}
+            {repos?.map(repo => <RepoElement key={repo.id}><img src={repo.owner.avatar_url} /><div><a href={repo.html_url}>{repo.name}</a><br/>by {repo.owner.login}</div><span>⭐ {repo.stargazers_count}</span></RepoElement>)}
         </RepoWrapper>
     
 }

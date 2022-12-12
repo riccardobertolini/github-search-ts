@@ -10,10 +10,11 @@ interface eventProps {
 }
 
 interface SearchInputProps {
-    updateRepos: (element:[])=>void
+    updateRepos: (element:[])=>void,
+    setLoading: (element:boolean)=>void
 }
 
-export const SearchInput = ({updateRepos}:SearchInputProps)  => {
+export const SearchInput = ({updateRepos, setLoading}:SearchInputProps)  => {
     const [value, setValue] = useState('');
 
     const debounceFn = useCallback(_debounce(handleDebounceFn, 1000), []);
@@ -23,8 +24,11 @@ export const SearchInput = ({updateRepos}:SearchInputProps)  => {
     }
 
     async function handleDebounceFn(inputValue:string) {
+        updateStateRepos([]);
+        setLoading(true);
         const repos = await getEntries(inputValue);
-        updateStateRepos(repos)
+        setLoading(false);
+        updateStateRepos(repos);
     }
 
     function handleChange (event:eventProps) {
