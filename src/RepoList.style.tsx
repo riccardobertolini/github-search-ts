@@ -7,7 +7,7 @@ export const external = styled.div`
 export const RepoWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
-    padding: 50px 20px;
+    padding: 50px 0;
 `;
 
 export const RepoElement = styled.div`
