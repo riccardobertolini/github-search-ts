@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const InputSeachField = styled.input`
     width: 300px;
-    height: 40px;
-    font-size: 20px;
-    margin: 20px;
+    height: 30px;
+    font-size: 15px;
+    margin: 20px 0;
 `;

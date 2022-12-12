@@ -31,4 +31,8 @@ export const RepoElement = styled.div`
         height: 50px;
         margin-right: 20px;
     }
+
+    div {
+        flex: 1;
+    }
 `;
