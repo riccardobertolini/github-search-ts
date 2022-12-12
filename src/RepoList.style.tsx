@@ -11,7 +11,7 @@ export const RepoWrapper = styled.div`
 `;
 
 export const RepoElement = styled.div`
-    width: calc(50% - 90px);
+    width: 100%;
     margin: 0 20px 20px 0;
     padding: 30px;
     display: flex;
@@ -19,6 +19,10 @@ export const RepoElement = styled.div`
     justify-content: space-between;
     border: 1px solid #eee;
     border-radius: 10px;
+
+    @media (max-width: 768px) {
+        width: calc(50% - 90px);
+    }
 
     a, a:visited {
         color: black;
