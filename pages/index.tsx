@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { RepoList, RepoProps } from '../src/RepoList';
 import { SearchInput } from '../src/SearchInput'
-import { ContainerWrapper } from './index.style';
+import { ContainerWrapper } from './../src/index.style';
 
 export default function Home() {
   const [repositories, updateRepos] = useState<RepoProps[]>([]);
